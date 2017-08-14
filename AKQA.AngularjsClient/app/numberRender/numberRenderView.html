@@ -1,0 +1,55 @@
+﻿<div class="panel panel-primary"
+     ng-controller="NumberRenderCtrl as vm">
+    <div class="panel-heading"
+         style="font-size:large">
+        Enter Details
+    </div>
+
+    <div class="panel-body">
+
+        <form class="form-horizontal" name="numberForm">
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-md-2 control-label"
+                           for="inputFullName">Full Name</label>
+                    <div class="col-md-4">
+                        <input class="form-control"
+                               id="inputFullName"
+                               type="text"
+                               placeholder="FullName"
+                               ng-model="vm.numberRenderResource.enteredFullName" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label"
+                           for="inputNumber">Number</label>
+                    <div class="col-md-4">
+                        <input class="form-control"
+                               id="inputNumber"
+                               type="text"
+                               placeholder="Number"
+                               ng-model="vm.numberRenderResource.enteredNumber" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4 col-md-offset-2">
+                        <span>
+                            <button class="btn btn-primary"
+                                    style="width:80px;margin-right:10px"
+                                    ng-click="vm.submit()">
+                                Process
+                            </button>
+                        </span>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+
+
+        <label>Your full name is: {{vm.numberRenderResource.enteredFullName}} </label>
+        <br /><br />
+        <label>The number is: {{vm.numberInWords.valueInEnglish}} </label>
+
+    </div>
+</div>
